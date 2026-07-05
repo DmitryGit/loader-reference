@@ -10,15 +10,11 @@
         </div>
         <div>
           <button class="btn btn-danger me-2" @click="addLoader">Добавить</button>
-<!--          <button class="btn btn-warning me-2" :disabled="!selectedLoader" @click="editLoader">Изменить</button>-->
-<!--          <button class="btn btn-danger me-2" :disabled="!selectedLoader" @click="deleteLoader">Удалить</button>-->
-<!--          <button class="btn btn-primary me-2" :disabled="!isEditing" @click="saveLoader">Сохранить</button>-->
-<!--          <button class="btn btn-secondary" :disabled="!isEditing" @click="cancelEdit">Отменить</button>-->
         </div>
       </div>
     </div>
 
-    <div style="max-height: 400px; overflow-y: auto; overflow-x: hidden">
+    <div style="max-height: 600px; overflow-y: auto; overflow-x: hidden">
       <!-- Таблица погрузчиков -->
       <table class="table table-striped table-hover align-middle">
         <thead>

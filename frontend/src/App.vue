@@ -42,12 +42,10 @@ const incidentCount = ref(0);
 
 function handleSelectLoader(id) {
   selectedLoaderId.value = id;
-  console.log('selectedLoaderId.value', selectedLoaderId.value)
 }
 
 function handleIncidentCount(count) {
   incidentCount.value = count;
-  console.log('incidentCount.value', incidentCount.value)
 }
 </script>
 

@@ -1,11 +1,9 @@
 <template>
   <div class="mt-4">
     <h4><strong>Простои по погрузчику</strong></h4>
-    <div v-if="loaderId" style="max-height: 400px; overflow-y: auto; overflow-x: hidden">
+    <div v-if="loaderId" style="max-height: 600px; overflow-y: auto; overflow-x: hidden">
       <div class="mb-2">
         <button class="btn btn-danger me-2" @click="openAddModal">Добавить</button>
-<!--        <button class="btn btn-warning btn-sm me-2" :disabled="!selectedIncident" @click="openEditModal">Изменить</button>-->
-<!--        <button class="btn btn-danger btn-sm me-2" :disabled="!selectedIncident" @click="deleteIncident">Удалить</button>-->
       </div>
 
       <table class="table table-sm">
