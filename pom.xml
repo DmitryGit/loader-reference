@@ -84,7 +84,7 @@
                 <version>1.12.1</version>
                 <configuration>
                     <workingDirectory>${project.basedir}/frontend</workingDirectory>
-                    <installDirectory>${project.basedir}/backend/target</installDirectory>
+                    <installDirectory>${project.build.directory}</installDirectory>
                 </configuration>
                 <executions>
                     <execution>
@@ -129,7 +129,7 @@
                             <goal>copy-resources</goal>
                         </goals>
                         <configuration>
-                            <outputDirectory>backend/target/classes/static</outputDirectory>
+                            <outputDirectory>${project.build.outputDirectory}/static</outputDirectory>
                             <resources>
                                 <resource>
                                     <directory>${project.basedir}/frontend/dist</directory>
