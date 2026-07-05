@@ -54,6 +54,15 @@
     </dependencies>
 
     <build>
+        <!-- Где искать Java-код -->
+        <sourceDirectory>${project.basedir}/backend/src/main/java</sourceDirectory>
+
+        <!-- Где искать ресурсы (application.properties, шаблоны и т.д.) -->
+        <resources>
+            <resource>
+                <directory>${project.basedir}/backend/src/main/resources</directory>
+            </resource>
+        </resources>
         <plugins>
             <plugin>
                 <groupId>org.springframework.boot</groupId>
@@ -75,7 +84,7 @@
                 <version>1.12.1</version>
                 <configuration>
                     <workingDirectory>${project.basedir}/frontend</workingDirectory>
-                    <installDirectory>backend/target</installDirectory>
+                    <installDirectory>${project.basedir}/backend/target</installDirectory>
                 </configuration>
                 <executions>
                     <execution>
