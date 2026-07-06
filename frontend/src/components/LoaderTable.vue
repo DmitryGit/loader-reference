@@ -94,7 +94,7 @@ const props = defineProps({
   }
 });
 
-const emit = defineEmits(['select-loader']);
+const emit = defineEmits(['select-loader', "select-loader-number"]);
 
 const loaders = ref([]);
 const selectedLoader = ref(null);
@@ -120,6 +120,7 @@ async function fetchLoaders() {
       } else {
         selectedLoader.value = null;
         emit('select-loader', null);
+        emit('select-loader-number', null);
       }
     }
   } catch (error) {
@@ -135,6 +136,7 @@ function selectLoader(loader) {
   if (isEditing.value) return; // не даём менять выбор во время редактирования
   selectedLoader.value = loader;
   emit('select-loader', loader.id);
+  emit('select-loader-number', loader.number);
 }
 
 // Добавление
@@ -145,6 +147,7 @@ function addLoader() {
   isNewRow.value = true;
   selectedLoader.value = null;
   emit('select-loader', null); // очищаем выбор в родителе
+  emit('select-loader-number', null); // очищаем выбор в родителе
 }
 
 async function saveNewLoader() {
@@ -183,6 +186,7 @@ async function saveLoader() {
     // повторно эмитим выбранный, чтобы обновить простои (если нужно)
     if (selectedLoader.value) {
       emit('select-loader', selectedLoader.value.id);
+      emit('select-loader-number', selectedLoader.value.number);
     }
   } catch (error) {
     alert('Ошибка сохранения: ' + (error.response?.data || error.message));
@@ -205,6 +209,7 @@ async function deleteLoader() {
     await api.delete(`/loaders/${selectedLoader.value.id}`);
     selectedLoader.value = null;
     emit('select-loader', null); // очищаем выбор
+    emit('select-loader-number', null); // очищаем выбор
     await fetchLoaders();
   } catch (error) {
     alert('Ошибка удаления: ' + (error.response?.data || error.message));

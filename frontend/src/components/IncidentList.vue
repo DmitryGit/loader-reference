@@ -1,6 +1,6 @@
 <template>
   <div class="mt-4">
-    <h4><strong>Простои по погрузчику</strong></h4>
+    <h4><strong>Простои по погрузчику {{loaderNumber}}</strong></h4>
     <div v-if="loaderId" style="max-height: 600px; overflow-y: auto; overflow-x: hidden">
       <div class="mb-2">
         <button class="btn btn-danger me-2" @click="openAddModal">Добавить</button>
@@ -44,7 +44,8 @@ import api from '../api';
 import IncidentModal from './IncidentModal.vue';
 
 const props = defineProps({
-  loaderId: Number
+  loaderId: Number,
+  loaderNumber: String
 });
 
 const emit = defineEmits(['incident-count']);

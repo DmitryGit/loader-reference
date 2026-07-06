@@ -8,11 +8,12 @@
         </div>
         <div class="modal-body">
           <form @submit.prevent="submit">
-            <div class="mb-3">
+            <div class="mb-3 w-40" style="float: left">
               <label class="form-label">Дата и время начала *</label>
               <input type="datetime-local" class="form-control" v-model="form.startTime" required />
             </div>
-            <div class="mb-3">
+
+            <div class="mb-3 w-40" style="float: right">
               <label class="form-label">Дата и время окончания</label>
               <input type="datetime-local" class="form-control" v-model="form.endTime" />
             </div>
