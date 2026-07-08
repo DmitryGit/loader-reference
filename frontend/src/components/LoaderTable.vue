@@ -14,7 +14,7 @@
       </div>
     </div>
 
-    <div style="max-height: 600px; overflow-y: scroll; overflow-x: auto">
+    <div style="max-height: 500px; overflow-y: scroll; overflow-x: auto">
       <!-- Таблица погрузчиков -->
       <table class="table table-striped table-hover align-middle">
         <thead>
