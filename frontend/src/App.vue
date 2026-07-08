@@ -1,8 +1,7 @@
 <template>
   <header class="rounded-4" style="background-color: crimson; height: 100px !important; margin: 10px"><div align="right" style="padding: 30px"><button type="button" class="btn btn-light"><strong>Профиль</strong></button></div></header>
-  <div style="display: flex; width: 100%;">
-  <div style="font-size: 24px; background-color: lightgray; width: 200px; padding: 10px; margin: 10px" class="rounded-4">
-<!--  <div style="font-size: 24px; float: left; height: 90vh; background-color: lightgray; width: 200px; padding: 10px; margin-top: 10px" class="rounded-4">-->
+  <div style="display: flex; width: 100%; height: 80vh;">
+  <div style="font-size: 24px; background-color: lightgray; width: 200px; padding: 10px; margin: 10px; height: clamp(650px, 80vh, calc(100vh - 50px));" class="rounded-4">
     <div style="margin-top: 30px;">Пользователи</div>
     <div style="margin-top:30px;">Уведомления и напоминания</div>
     <div style="margin-top: 30px;">Настройки АИС ОГПА</div>
@@ -10,8 +9,7 @@
     <div style="margin-top: 30px;">Резервное копирование и восстановление</div>
     <div style="margin-top: 30px;margin-bottom: 30px;">Справочники</div>
   </div>
-  <div id="app" class="rounded-4 w-auto" style="margin: 10px; background-color: lightgray; flex-grow: 1; padding: 10px" >
-<!--  <div id="app" class="container rounded-4 w-auto" style="margin: 10px; background-color: lightgray; float: left" >-->
+  <div id="app" class="rounded-4 w-auto" style="margin: 10px; background-color: lightgray; flex-grow: 1; padding: 10px; height: clamp(650px, 80vh, calc(100vh - 50px));" >
     <h1><strong>Справочник погрузчиков</strong></h1>
     <div class="row">
       <div class="col-md-7">

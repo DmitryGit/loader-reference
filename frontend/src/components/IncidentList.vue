@@ -4,7 +4,7 @@
     <div class="mb-2">
       <button class="btn btn-danger me-2" @click="openAddModal">Добавить</button>
     </div>
-    <div v-if="loaderId" style="max-height: 500px; overflow-y: scroll; overflow-x: auto">
+    <div v-if="loaderId" style="overflow-y: scroll; overflow-x: auto; height: clamp(150px, 60vh, calc(80vh - 50px));">
       <table class="table table-sm">
         <thead>
           <tr>
