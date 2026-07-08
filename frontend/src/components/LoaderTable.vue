@@ -14,7 +14,7 @@
       </div>
     </div>
 
-    <div style="max-height: 600px; overflow-y: auto; overflow-x: hidden">
+    <div style="max-height: 600px; overflow-y: scroll; overflow-x: auto">
       <!-- Таблица погрузчиков -->
       <table class="table table-striped table-hover align-middle">
         <thead>
@@ -22,7 +22,7 @@
             <th>Код</th>
             <th>Марка</th>
             <th>Номер</th>
-            <th>Грузоподъ-<br/>мность</th>
+            <th>Грузоподъ-<br/>емность</th>
             <th>Активен</th>
             <th>Изменен</th>
             <th>Пользователь</th>

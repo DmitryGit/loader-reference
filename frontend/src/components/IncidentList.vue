@@ -1,11 +1,10 @@
 <template>
   <div class="mt-4">
     <h4><strong>Простои по погрузчику {{loaderNumber}}</strong></h4>
-    <div v-if="loaderId" style="max-height: 600px; overflow-y: auto; overflow-x: hidden">
-      <div class="mb-2">
-        <button class="btn btn-danger me-2" @click="openAddModal">Добавить</button>
-      </div>
-
+    <div class="mb-2">
+      <button class="btn btn-danger me-2" @click="openAddModal">Добавить</button>
+    </div>
+    <div v-if="loaderId" style="max-height: 600px; overflow-y: scroll; overflow-x: auto">
       <table class="table table-sm">
         <thead>
           <tr>
